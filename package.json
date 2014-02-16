@@ -1,0 +1,24 @@
+{
+  "name": "pdxTechFinder",
+  "version": "0.0.1",
+  "description": "A Portland Code School project that aims to facilitate the learning process for new programmers and integrate them into Portland's local tech community.",
+  "main": "index.js",
+  "dependencies": {
+    "browserify-handlebars": "~0.2.0",
+    "handlebars": "~2.0.0-alpha.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/curriedav/pdxTechFinder.git"
+  },
+  "author": "David Currie, Joshua Fingert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/curriedav/pdxTechFinder/issues"
+  },
+  "homepage": "https://github.com/curriedav/pdxTechFinder"
+}
