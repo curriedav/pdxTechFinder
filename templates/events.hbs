@@ -1,24 +1,22 @@
 {{#each this}}
 <div class="panel-group" id="accordion">
-  	<div class="panel panel-default">
-	    <div class="panel-heading">
-	      	<h4 class="panel-title">
-	        	<a data-toggle="collapse" data-parent="#accordion" href="#{{id}}">
-	          		<p>{{formattedTime}} - {{name}}</p>
-	        	</a>
-	      	</h4>
-	    </div>
+  <div class="panel panel-default">
+	  <div class="panel-heading">
+    	<h4 class="panel-title">
+      	<a data-toggle="collapse" data-parent="#accordion" href="#{{id}}">
+        	<p>{{formattedTime}} - {{name}}</p>
+      	</a>
+    	</h4>
+	  </div>
     	
-    	<div id="{{id}}" class="panel-collapse collapse">
-      		<div class="panel-body">
-        		{{{description}}}
-
-		        <p>{{venue.name}}<br>{{venue.address_1}}<br>
+   	<div id="{{id}}" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{{description}}}
+		    <p>{{venue.name}}<br>{{venue.address_1}}<br>
 		  		{{venue.city}}, {{venue.state}} {{venue.zip}}</p><br>
-
 		  		<a href="{{event_url}}">Meetup Link</a>
-      		</div>
-    	</div>
+      </div>
+    </div>
 	</div>
 </div>
 {{/each}}
