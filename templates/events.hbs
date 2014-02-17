@@ -8,15 +8,14 @@
       	</a>
     	</h4>
 	  </div>
-    	
-   	<div id="{{id}}" class="panel-collapse collapse">
-      <div class="panel-body">
-        {{{description}}}
-		    <p>{{venue.name}}<br>{{venue.address_1}}<br>
-		  		{{venue.city}}, {{venue.state}} {{venue.zip}}</p><br>
-		  		<a href="{{event_url}}">Meetup Link</a>
-      </div>
-    </div>
+  
+ 		<div id="{{id}}" class="panel-collapse collapse">
+    	<div class="panel-body">
+      	{{{description}}}
+	    	<p>{{venue.name}}<br>{{venue.address_1}}<br>
+	    	{{venue.city}}, {{venue.state}} {{venue.zip}}</p><br>
+	  		<a href="{{event_url}}">Meetup Link</a>
+    	</div>
+  	</div>
 	</div>
-</div>
 {{/each}}
