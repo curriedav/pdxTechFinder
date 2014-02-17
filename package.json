@@ -4,7 +4,7 @@
   "description": "A Portland Code School project that aims to facilitate the learning process for new programmers and integrate them into Portland's local tech community.",
   "main": "index.js",
   "dependencies": {
-    "browserify-handlebars": "0.0.2"
+    "browserify-handlebars": "0.2.0"
   },
   "devDependencies": {},
   "scripts": {
