@@ -1,0 +1,122 @@
+body {
+	background-image: url(assets/white_organic_pattern_fin.png);
+}
+
+.mywrapper {
+	height: auto;
+	width: auto;
+	-moz-box-shadow: 0 0 5px black;
+	-webkit-box-shadow: 0 0 5px black;
+	box-shadow: 0 0 5px black;
+/*	padding-left: 5px;
+	padding-right: 5px;
+	background-color: brown;*/
+}
+
+h1 {
+	background-image: url(assets/portland.png);
+	height: 180px;
+	width: 100%;
+	text-align: center;
+	font-size: 450%;
+	vertical-align: middle;
+	line-height: 180px;
+	text-shadow: 0 0 10px white;
+	font-weight: 400;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+@media (max-width: 500px){
+	h1 {
+		font-size: 400%;
+	}
+}
+@media (max-width: 450px){
+	h1 {
+		font-size: 350%;
+	}
+}
+@media (max-width: 400px){
+	h1 {
+		font-size: 300%;
+	}
+}
+@media (max-width: 350px){
+	h1 {
+		font-size: 250%;
+	}
+}
+
+/*LINK COLOR--------------------------------*/
+a {
+	color: blue;
+}
+
+
+
+.panel {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	background-color: coral;
+}
+
+
+/*Events/Groups background*/
+.panel .panel-default {
+	background-color: cyan;
+	border: 1px solid black;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.panel-group {
+	border-top: none;
+}
+
+.panel.panel-default .panel-heading {
+	background-color: yellow;
+}
+
+/*Navbar*/
+li {
+	font-size: 125%;
+}
+
+
+.nav {
+	background-color: green;
+}
+
+.nav li a:hover{
+	background-color: purple;
+}
+
+.nav-pills > li {
+	background-color: red;
+	font-family: Helvetica;
+}
+
+.nav-pills > li > a {
+	color: orange;
+}
+
+.panel-title {
+	margin-top: 8px;
+	font-weight: 400;
+}
+
+.nav-pills {
+	text-align: center;
+}
+
+
+/*Navbar ACTIVE*/
+html body.container div.panel.panel-default ul.nav.nav-pills li.active a {
+	background-color: black;
+	color: aquamarine;
+}
+
+
