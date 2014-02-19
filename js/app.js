@@ -26,7 +26,7 @@ $(function () {
 
 		$.getJSON(url + "&callback=?", null, function(eventData) {
 		 	app.eventObj = eventData;
-		 	console.log(app.eventObj);
+		 	//console.log("this should be data from meetup object: " + app.eventObj);
 		 	app.models.events.set(app.eventObj);
 		 	app.models.home.set(app.eventObj);
 		});
@@ -38,7 +38,8 @@ $(function () {
 
 		$.getJSON(url + "&callback=?", null, function(groupData) {
 		 	app.groupObj = groupData;
-		 	console.log(app.groupObj);
+		 	//console.log("this is 11 groups: ");
+		 	//console.log(app.groupObj);
 		 	app.models.groups.set(app.groupObj);
 		});
 	}
