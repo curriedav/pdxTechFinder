@@ -29,6 +29,7 @@ $(function () {
 		 	//console.log("this should be data from meetup object: " + app.eventObj);
 		 	app.models.events.set(app.eventObj);
 		 	app.models.home.set(app.eventObj);
+		 	main();
 		});
 	}
 
@@ -51,9 +52,11 @@ $(function () {
 
 
 	//Instantiate Backbone Views
-	app.views.event = new EventView({model: app.models.events});
-	app.views.group = new GroupView({model: app.models.groups});
-	app.views.home = new HomeView({model: app.models.home});
+	function main () {
+		app.views.event = new EventView({model: app.models.events});
+		app.views.group = new GroupView({model: app.models.groups});
+		app.views.home = new HomeView({model: app.models.home});
+	}
 
 
 	//Meetup API request using JSONP & Set Model Data
