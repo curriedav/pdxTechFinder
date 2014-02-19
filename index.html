@@ -4,15 +4,18 @@
 	<title>pdxTechFinder</title>
 
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/lib/underscore-min.js"></script>
 	<script type="text/javascript" src="/js/lib/backbone-min.js"></script>
 	<script type="text/javascript" src="/bundle.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Vrx8Xfy9QMqShoflnckX-nBzEruXn6U&sensor=true"></script>
 </head>
 	<body class="container">
 		<h1>pdxTechFinder</h1>
+
+		
+
 		<div class="panel panel-default">
 			<ul class="nav nav-pills">
 		  		<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
@@ -22,7 +25,12 @@
 			</ul>
 
 			<div class="tab-content">
-				<div class="tab-pane fade in active" id="home"></div>
+				<div class="tab-pane fade in active" id="home" style="width:100%; height:100%">
+
+<div id="map-canvas" style="width:100%; height:1000px"></div>
+
+
+				</div>
 				<div class="tab-pane fade" id="events"></div>
 				<div class="tab-pane fade" id="groups"></div>
 				<div class="tab-pane fade" id="resources"></div>
