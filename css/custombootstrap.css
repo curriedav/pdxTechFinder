@@ -3563,7 +3563,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
-  min-width: 125px;
+  min-width: 135px;
 }
 .nav-pills > li > a {
   border-radius: 0;
