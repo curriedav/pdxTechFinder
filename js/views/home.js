@@ -36,6 +36,7 @@
 
 
             var array = [];
+            array.push(eventData);
             var mapOptions = {
               center: new google.maps.LatLng(lat, lon),
               zoom: 14
@@ -52,7 +53,7 @@
             for (var i = 0; i < 3; i++) {
 
               var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(eventData[i].venue.lat, eventData[i].venue.lon),
+                position: new google.maps.LatLng(myLatlng),//array[i][1].venue.lat, array[i][2].venue.lon
                 map: map,
                 title:"Hello World!"
               });
