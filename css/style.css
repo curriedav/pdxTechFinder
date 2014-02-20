@@ -13,6 +13,8 @@ body {
 .resoucesbg {
 	background-image: url(assets/bluepastel_organic_pattern_fin.png);
 	font-size: 110%;
+	width: 100%;
+	height: 100%;
 }
 
 h1 {
