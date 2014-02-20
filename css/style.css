@@ -10,6 +10,11 @@ body {
 	box-shadow: 0 0 5px black;
 }
 
+.resoucesbg {
+	background-image: url(assets/bluepastel_organic_pattern_fin.png);
+	font-size: 110%;
+}
+
 h1 {
 	background-image: url(assets/portland_revised.png);
 	height: 180px;
