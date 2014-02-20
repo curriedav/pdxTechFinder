@@ -52,9 +52,10 @@ $(function () {
 
 
 	//Instantiate Backbone Views
+	app.views.event = new EventView({model: app.models.events});
+	app.views.group = new GroupView({model: app.models.groups});
 	function main () {
-		app.views.event = new EventView({model: app.models.events});
-		app.views.group = new GroupView({model: app.models.groups});
+		
 		app.views.home = new HomeView({model: app.models.home});
 	}
 
