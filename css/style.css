@@ -1,0 +1,126 @@
+body {
+	background-image: url(assets/white_organic_pattern_fin.png);
+}
+
+.mywrapper {
+	height: auto;
+	width: auto;
+	-moz-box-shadow: 0 0 5px black;
+	-webkit-box-shadow: 0 0 5px black;
+	box-shadow: 0 0 5px black;
+}
+
+h1 {
+	background-image: url(assets/portland_revised.png);
+	height: 180px;
+	width: 100%;
+	text-align: center;
+	font-size: 450%;
+	vertical-align: middle;
+	line-height: 180px;
+	text-shadow: 0 0 8px rgb(215,242,247), 0 0 12px rgb(215,242,247);
+	font-weight: 400;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+@media (max-width: 500px){
+	h1 {
+		font-size: 400%;
+	}
+}
+@media (max-width: 450px){
+	h1 {
+		font-size: 350%;
+	}
+}
+@media (max-width: 400px){
+	h1 {
+		font-size: 300%;
+	}
+}
+@media (max-width: 350px){
+	h1 {
+		font-size: 250%;
+	}
+}
+
+/*LINK COLOR--------------------------------*/
+a {
+	color: #2556BA;
+}
+
+
+
+.panel {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	background-color: none;
+}
+
+
+/*Events/Groups background*/
+.panel .panel-default {
+	background-color: cyan;
+	background-image: url(assets/bluepastel_organic_pattern_fin.png);
+	border: 1px solid black;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.panel-group {
+	border-top: none;
+}
+
+.panel.panel-default .panel-heading {
+	color: black;
+	background-color: #E9CCFF;
+	background-image: url(assets/tab_bg.png);
+}
+
+/*Navbar*/
+li {
+	font-size: 125%;
+}
+
+
+.nav {
+	background-color: gray;
+	background-image: url(assets/gray_organic_pattern_fin.png);
+}
+
+.nav li a:hover{
+	background-color: rgba(50,50,50,0.6);
+}
+
+.nav-pills > li {
+	background-color: rgba(60,60,60,0.6);
+	font-family: Helvetica;
+	font-size: 140%;
+}
+
+.nav-pills > li > a {
+	color: rgb(245,198,107);
+}
+
+.panel-title {
+	margin-top: 8px;
+	font-weight: 400;
+	font-size: 130%;
+}
+
+.nav-pills {
+	text-align: center;
+}
+
+
+/*Navbar ACTIVE*/
+html body.container div.panel.panel-default ul.nav.nav-pills li.active a {
+	background-color: rgba(34,34,34,0.75);
+	color: white;
+	color: rgb(215,242,247);
+}
+
+
