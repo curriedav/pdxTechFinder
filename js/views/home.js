@@ -19,12 +19,11 @@
           lat,
           lon;
 
-          for (var i = 0; i < 4; ++i) {
+          for (var i = 0; i < 3; ++i) {
             eventData.push([data[i].name, data[i].venue.address_1, data[i].venue.lat, data[i].venue.lon]); //
 
 
           };
-          console.log(eventData);
 
           cartography(eventData);
                                   
@@ -35,18 +34,6 @@
           
 
           function cartography (eventData) {
-
-
-            // var array = [];
-            // array.push(eventData);
-
-            //console.log(eventData[0].venue);
-
-            // if (array.length == 3) {
-            //   for (var i = 0; i < 3; ++i){
-            //     var tempMarker[i] = array[i];
-            //   }
-            // }
 
 
             var mapOptions = {
@@ -72,26 +59,27 @@
                   title: contentString
                 });
                contentString = eventData[i][0];
-               console.log(contentString);
+               
+               console.log('boop!');
 
                infowindow = new google.maps.InfoWindow({
                    content: contentString
                 });
-              google.maps.event.addListener(marker, 'click', function() {  
-                infowindow.open(map, marker)
-              })
-            }
-          
-            
-          
+              // google.maps.event.addListener(marker, 'click', function() {  
+              //   infowindow.open(map, marker)
+              // })
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              console.log('beep!');
               return function () {
-                infowindow.content = contentString;
+                infowindow.content = eventData[i][0] + " - " + eventData[i][1];
                 
                 // infowindow.setContent(contentString); eventData[i][0]
                 infowindow.open(map, marker);
               }
             })(marker, i));
+            }
+          
+            
 
           return this;
         }
