@@ -15,18 +15,20 @@
           data = this.model.get('results') || { data: [] };
 
           ////////////////////////////////////////////////////////////////////////////////
-          var markerArray = [];
+          var markerArray = [],
+          lat,
+          lon;
 
-          for (var i = 0; i < 3; ++i) {
-            eventData.push(data[i]);
-            var lat,
-                lon;
-            lat = eventData[i].venue.lat;
-            lon = eventData[i].venue.lon;
-            flag = true;
-            cartography(eventData);
+          for (var i = 0; i < 4; ++i) {
+            eventData.push([data[i].name, data[i].venue.address_1, data[i].venue.lat, data[i].venue.lon]); //
+
+
           };
-          
+          console.log(eventData);
+
+          cartography(eventData);
+                                  
+
             
 
           /////////////////////////////////////////////////////////////////////////////////////
@@ -35,75 +37,64 @@
           function cartography (eventData) {
 
 
-            var array = [];
-            array.push(eventData);
+            // var array = [];
+            // array.push(eventData);
+
+            //console.log(eventData[0].venue);
+
+            // if (array.length == 3) {
+            //   for (var i = 0; i < 3; ++i){
+            //     var tempMarker[i] = array[i];
+            //   }
+            // }
+
+
             var mapOptions = {
-              center: new google.maps.LatLng(lat, lon),
+              center: new google.maps.LatLng(45.5200, -122.6819),
               zoom: 14
             };
-
-            var contentString = "<p>Testing</p>";
+            console.log(eventData);
+            var contentString;
             var myLatlng = new google.maps.LatLng(lat, lon);
             var map = new google.maps.Map(document.getElementById("map-canvas"),
               mapOptions);
+            //var infowindow = new google.maps.InfoWindow();
             var infowindow = new google.maps.InfoWindow({
               content: contentString
             });
-            
-            for (var i = 0; i < 3; i++) {
+            var marker;
 
-              var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(myLatlng),//array[i][1].venue.lat, array[i][2].venue.lon
-                map: map,
-                title:"Hello World!"
-              });
+
+            for (var i = 0; i < eventData.length; i++) {
+               marker = new google.maps.Marker({
+                  position: new google.maps.LatLng(eventData[i][2], eventData[i][3]),//array[i].venue.lat, array[i].venue.lon
+                  map: map,
+                  title: contentString
+                });
+               contentString = eventData[i][0];
+               console.log(contentString);
+
+               infowindow = new google.maps.InfoWindow({
+                   content: contentString
+                });
+              google.maps.event.addListener(marker, 'click', function() {  
+                infowindow.open(map, marker)
+              })
             }
           
             
-
-            markerArray.push(marker);
           
-            google.maps.event.addListener(marker, 'click', function() {
-              infowindow.open(map,marker);
-            });
-          
-            console.log('maptimeout!');
-
-            
-
-            if(markerArray.length == 3){
-              mapDisplay(markerArray);
-            }
-          }
-
-          //////////////
-
-          function mapDisplay (markerArray) {
-
-
-
-
-            markerArray[0];
-            markerArray[1];
-            markerArray[2];
-
-            
-
-            console.log(markerArray);
-
-          }
-
-
-
-
-
-
-
-
-          ///////////////
-
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function () {
+                infowindow.content = contentString;
+                
+                // infowindow.setContent(contentString); eventData[i][0]
+                infowindow.open(map, marker);
+              }
+            })(marker, i));
 
           return this;
+        }
       }
 
 });
